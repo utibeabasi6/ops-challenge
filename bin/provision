@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+
+ANSIBLE_CONFIG=config/ansible.cfg \
+ansible-playbook playbooks/deps.yaml 
+
+source ~/.bashrc
+
+ANSIBLE_CONFIG=config/ansible.cfg \
+ansible-playbook playbooks/provision.yml "$@"

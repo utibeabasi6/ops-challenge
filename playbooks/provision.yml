@@ -1,0 +1,12 @@
+---
+- name: Provision
+  hosts: all
+  gather_facts: yes
+  become: yes
+  vars:
+    new_go_version: 1.17.6
+    home_dir: "/root"
+  roles:
+    # - golang
+    - log
+    - cosmos
